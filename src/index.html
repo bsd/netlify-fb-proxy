@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Netlify Facebook Proxy Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Netlify Facebook Proxy Example</h1>
+    <p>
+      Hi there! This is a playground to test out
+      <a href="https://www.netlify.com/docs/functions">Netlify’s Lambda Functions</a>.
+    </p>
+    
+    <article>
+      <h2>Netlify Graph API Proxy</h2>
+      <p>This could just be done totally open but in this case it's adapted to work more lik ethe setup for the ACP acquarium site.</p>
+      <pre class="language-js"><code><%= require('html-loader!./lambda/fb_scrape.js') %></code></pre>
+      <h3>Try it out</h3>
+      <p><a href="/.netlify/functions/fb_scrape?userName=Martin&imageName=foo">Click to scrape!</a></p>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
