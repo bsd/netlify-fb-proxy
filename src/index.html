@@ -1,8 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Netlify Facebook Proxy Example</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
+    <title></title>
+    <meta property="og:title">
+    
+    <meta name="description">
+    <meta property="og:description">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image">
+    
+    <meta property="og:url">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
     <link href="/normalize.css" rel="stylesheet">
     <link href="/styles.css" rel="stylesheet">
   </head>
@@ -26,6 +35,23 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
     <script src="main.js"></script>
     <script>
+      // Set title
+      document.querySelector('title').innerHTML = window.location.search;
+
+      // Set og:title
+      document.querySelector('meta[property="og:title"]').setAttribute('content', window.location.search);
+
+      // Set description
+      document.querySelector('meta[name="description"]').setAttribute('content', window.location.search);
+      // Set og:description
+      document.querySelector('meta[property="og:description"]').setAttribute('content', window.location.search);
+
+      // Set og:image
+      document.querySelector('meta[property="og:image"]').setAttribute('content', "http://placekitten.com/200/300");
+
+      // Set og:url
+      document.querySelector('meta[property="og:url"]').setAttribute('content', "http://florf");
+
       document.getElementById('filler').innerHTML = window.location.search;
     </script>
   </body>
