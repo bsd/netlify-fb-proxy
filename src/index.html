@@ -8,6 +8,7 @@
   </head>
   <body>
     <h1>Netlify Facebook Proxy Example</h1>
+    <div id="filler">Replace Content</div>
     <p>
       Hi there! This is a playground to test out
       <a href="https://www.netlify.com/docs/functions">Netlify’s Lambda Functions</a>.
@@ -24,5 +25,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
     <script src="main.js"></script>
+    <script>
+      document.getElementById('filler').innerHTML = window.location.search;
+    </script>
   </body>
 </html>

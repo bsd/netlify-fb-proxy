@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently 'npm run start:client' 'npm run start:server'",
     "start:client": "webpack-dev-server --mode development --hot --config webpack.client.js",
-    "start:server": "netlify-lambda serve src/lambda -c webpack.server.js",
     "build": "npm run build:client && npm run build:server",
     "build:client": "webpack --mode production --config webpack.client.js",
-    "build:server": "netlify-lambda build src/lambda"
+    "build:server": "netlify-lambda build src/lambda",
+    "start:server": "netlify-lambda serve src/lambda -c webpack.server.js"
   },
   "repository": "git@github.com:bsd/netlify-fb-proxy.git",
   "author": "Martin Olson <molson@bluestatedigital.com>",
